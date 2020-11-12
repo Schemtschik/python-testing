@@ -5,9 +5,9 @@ import pytest
 calculator = Calculator()
 
 
-#@pytest.mark.my_suite
+@pytest.mark.skip
 def test1():
-    assert calculator.add(4, 7) == 11
+    assert calculator.add(4, 7) == 12
 
 
 def test2():
@@ -40,7 +40,7 @@ def test_with_mock(mocker):
         'calculator.Calculator.add',
         return_value=5
     )
-    assert calculator.add(4, 7) != 11
+    assert calculator.f() == 5
 
 
 @pytest.fixture

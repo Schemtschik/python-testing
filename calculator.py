@@ -13,3 +13,6 @@ class Calculator:
 
     def divide(self, x1, x2):
         return x1 / x2
+
+    def f(self):
+      return self.add(1, 2)
