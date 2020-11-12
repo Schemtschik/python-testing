@@ -34,3 +34,11 @@ jobs:
     - name: Test with unittest
       run: |
         pytest
+    - name: Build coverage report
+      run: |
+        pytest --cov . --cov-report html
+    - name: Upload  coverage report
+            uses: actions/upload-artifact@v1
+            with:
+              name: output-log-file
+              path: output.log
