@@ -5,7 +5,6 @@ import pytest
 calculator = Calculator()
 
 
-@pytest.mark.skip
 def test1():
     assert calculator.add(4, 7) == 12
 
