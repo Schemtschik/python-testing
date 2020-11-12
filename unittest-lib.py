@@ -1,4 +1,6 @@
 import unittest
+import editdistance
+
 from calculator import Calculator
 
 
@@ -17,6 +19,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self):
         self.assertEqual(self.calculator.divide(10, 2), 5)
+
+    def test_lib(self):
+        self.assertEqual(editdistance.eval('111', '112'), 1)
 
 
 if __name__ == "__main__":
